@@ -1,0 +1,93 @@
+<html>
+    <head>
+    	<title>Chatting app | Gooroocool</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+       <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Goorookool</title>
+
+        <!-- Bootstrap -->
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    </head>
+   <body class="dashboard">
+       
+          <div class="middle">
+           <nav class="navbar navbar-default navbar-fixed-top dash-nav" role="navigation"> 
+           <div class="container">
+            <div class="navbar-header"> 
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse"> 
+                    <span class="sr-only">Toggle navigation</span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+              </button> 
+
+              <div class="navbar-brand"><img  href="#"><img class="logo" src="../img/logo.png"></div> 
+
+              </div> 
+                  <div class="collapse navbar-collapse navbar-right" id="example-navbar-collapse"> 
+                      <ul class="nav navbar-nav"> 
+                          <li class="active"><a href="dashboard.php">Dashboard</a></li> 
+                          <li><a href="blogging.php">Blogging</a></li> 
+                          <li><a href="errpage.html">Chatting</a></li>
+                          <li><a href="errpage.html">Teachers zone</a></li>
+                          <li><a href="errpage.html">Q/A</a></li>
+                          <li><a href="errpage.html">People</a></li> 
+                          <li class="dropdown"> 
+                              <a style="color:red" href="#" class="dropdown-toggle" data-toggle="dropdown">Hi <?php echo @$user_info['firstname']."       "; ?><span class="glyphicon glyphicon-user "></span> <b class="caret"></b> </a> 
+                              <ul class="dropdown-menu"> 
+                                  <li><a href="profile.php"><span class="glyphicon glyphicon-user "> </span>  Profile</a></li> 
+                                  <li><a href="#"><span class="glyphicon glyphicon-cog"> </span>  Settings</a></li> 
+                                  <li><a href="logout.php"><span class="glyphicon glyphicon-off "> </span>  Logout</a></li> 
+                                  <li class="divider"></li> 
+                              </ul> 
+                          </li>
+                          <li>
+                            <span></span>
+                          </li>
+                      </ul> 
+                  </div></div>
+              </nav>
+           </div>
+<section style="height:3em;"></section>
+
+		<div class="container">
+					<div class="chat">
+						<div class="disp_chat">
+							<div class="receiver">
+								<center>
+									User name
+								</center>
+								<button onclick="loadchat(2, 1);">Load Chat</button>
+							</div>
+							<div class="disp_chat">
+								<div class="output">
+									
+								</div>
+							</div>
+						</div>
+						<textarea class="entry form-control" placeholder="Type here and hit return" id="message"></textarea>
+						<br>
+						<button class="send" id="send" onclick="chatting(2,1);">Send</button> | <button type="reset">Reset</button>
+					</div>
+		</div>
+
+
+
+        <!-- Links 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
+       	<script src="ajaxchat/chatting.js" type="text/javascript"></script>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="../bootstrap/JQuery/jquery.min.js" rel="javascript/text"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../js/dashboardjs.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        $('h1').click(function(){
+			$('h1').slideUp();
+			$('h1').slideDown();
+		});
+        </script>
+    </body>
+    </html>
